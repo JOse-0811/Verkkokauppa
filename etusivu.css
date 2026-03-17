@@ -1,0 +1,55 @@
+body{
+    background-image: url("gradient-blur-pink-blue-abstract-background_53876-117324.avif");
+}
+/*Header*/
+.eks{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.logo{
+    width: 100px;
+}
+.esk{
+    background-color: rgba(252, 157, 214, 0.329);
+    font-size: 18px;
+}
+
+/* Hero-banner*/
+.ept{
+    text-align: center;
+}
+.eo{
+    font-size: 40px;
+}
+.es{
+    font-size: 14px;
+}
+.etsk{
+    background-color: rgba(143, 115, 255, 0.258);
+
+    padding: 10px;
+    font-size: 16px;
+}
+.tteksti{
+    font-size: 35px;
+}
+
+.ekarivi{
+    display: flex;
+    justify-content: center;
+}
+.tokarivi{
+    display: flex;
+    justify-content: center;
+}
+
+/*Footer*/
+.tiedot{
+    text-align: center;
+    height: 130px;
+}
+
+@media (max-width: 600px){
+    
+}
