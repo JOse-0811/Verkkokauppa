@@ -51,5 +51,10 @@ body{
 }
 
 @media (max-width: 600px){
-    
+    .ekarivi{
+        flex-direction: column;
+    }
+    .tokarivi{
+        flex-direction: column;
+    }
 }
