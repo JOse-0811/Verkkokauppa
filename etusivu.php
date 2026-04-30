@@ -12,6 +12,7 @@
 <!--Logo ja nappi kaupaan-->
     <header class="eks">
             <img class=logo src="FAVICON.jpg" alt="eLogo">
+            <button class="esr"><a href="rekisteri.php">Rekisteröinti</a></button>
             <button class="esk"><a href="siiry_kaupaan.php">Kauppaan</a></button>
     </header>
 <!--Tervetuloviesti ja nappi-->

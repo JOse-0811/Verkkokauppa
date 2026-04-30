@@ -3,16 +3,23 @@ body{
 }
 /*Header*/
 .eks{
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .logo{
+    display: flex;
     width: 100px;
+    flex-direction: row;
+    margin-right: auto;
 }
 .esk{
     background-color: rgba(252, 157, 214, 0.329);
     font-size: 18px;
+}
+.esr{
+    background-color: rgba(252, 157, 214, 0.329);
+    font-size: 16px;
 }
 
 /* Hero-banner*/
@@ -51,10 +58,12 @@ body{
 }
 
 @media (max-width: 600px){
+    /*ETUSIVU*/
     .ekarivi{
         flex-direction: column;
     }
     .tokarivi{
         flex-direction: column;
     }
+    /* KAUPPA*/
 }

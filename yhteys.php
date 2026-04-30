@@ -1,0 +1,15 @@
+<?php
+
+    $palvelin = 'localhost';
+    $käyttäjä = 'root';
+    $salasana = '';
+    $tietokanta = 'verkkokauppa';
+
+    $yhteys = new mysqli($palvelin, $käyttäjä, $salasana, $tietokanta);
+    if ($yhteys -> connect_error) {
+        die('Yhteyden mudostaminen epäonnistui; ');
+    };
+    $yhteys -> set_charset('utf8');
+    $_SESSION = array();
+    session_start();
+?>
