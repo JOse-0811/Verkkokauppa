@@ -7,6 +7,15 @@
 -- Palvelimen versio: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
+/*Käyttäjä*/
+CREATE TABLE Kayttaja(
+kaytaja_id INT AUTO_INCREMENT,
+käyttäjätunnus VARCHAR(20) NOT NULL,
+salasana VARCHAR(220) NOT NULL,
+rooli VARCHAR(10),
+PRIMARY KEY(kaytaja_id)
+);
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
