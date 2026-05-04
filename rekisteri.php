@@ -12,6 +12,7 @@
     ?>
     <header class="eks">
         <img class=logo src="FAVICON.jpg" alt="eLogo">
+        <button class="kirjaudu"><a href="kirjaudu.php">Kirjaudu</a></button>
         <button class="esk"><a href="etusivu.php">Etusivu</a></button>
     </header>
     
@@ -47,7 +48,7 @@
             }
             // Tallentaa käyttäjän
             else{
-                $lisays= "INSERT INTO kayttaja (käyttäjätunnus, salasana, rooli) VALUES ('$kautajanimi', '$salasana', '0')";
+                $lisays= "INSERT INTO kayttaja (käyttäjätunnus, salasana, rooli) VALUES ('$kautajanimi', '$salattu', '0')";
                 $tulos= $yhteys -> query($lisays);
 
                 if($tulos == TRUE){
