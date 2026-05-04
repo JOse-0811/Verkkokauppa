@@ -65,5 +65,11 @@ body{
     .tokarivi{
         flex-direction: column;
     }
-    /* KAUPPA*/
+    /*nappulat*/
+    .esk{
+    font-size: 13px;
+    }
+    .esr{
+        font-size: 10px;
+    }
 }

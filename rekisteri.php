@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rekisteri</title>
+    <link rel="stylesheet" href="mun.css">
 </head>
 <body>
     <?php
@@ -23,7 +24,7 @@
     </form>
     <br>
     <p>Rekisteröityessäsi verkkokaupaan käyttäjäksi hyväksyt henkilötietojesi käsitelyehdot.</p>
-    <p>Lue täältä <a href="tietosuoja.php">drinkkiarkiston tietosuojaseloste</a>.</p>
+    <p>Lue täältä <a href="tietosuoja.php">Tuottajamarket tietosuojaseloste</a>.</p>
 
     <?php
     if(isset($_POST["rekisteri"])){
