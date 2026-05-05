@@ -3,7 +3,7 @@
     $palvelin = 'localhost';
     $käyttäjä = 'root';
     $salasana = '';
-    $tietokanta = 'verkkokauppa';
+    $tietokanta = 'verkkokauppa2';
 
     $yhteys = new mysqli($palvelin, $käyttäjä, $salasana, $tietokanta);
     if ($yhteys -> connect_error) {

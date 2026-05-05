@@ -15,5 +15,26 @@
         <button class="esk"><a href="etusivu.php">Etusivu</a></button>
     </header>
     <h2>verkkokaupa</h2>
+<!--Haku ja luokkat-->
+    <form>
+    <input type="text" id="nimi" name="nimi" placeholder="Etsi tuoteitta">
+    <br><br>
+    <input type="checkbox" id="kaikki" name="kaikki" value="kaikki">
+    <label for="kaikki"> Kaikki</label><br>
+    <input type="checkbox" id="L1" name="L1" value="liha">
+    <label for="L1"> Liha</label>
+    <input type="checkbox" id="L2" name="L2" value="kala">
+    <label for="L2"> Kala</label>
+    <input type="checkbox" id="L3" name="L3" value="viljatuotteet">
+    <label for="L3"> Viljatuotteet</label>
+    <input type="checkbox" id="L4" name="L4" value="marjat">
+    <label for="L4"> Marjat</label>
+    <input type="checkbox" id="L5" name="L5" value="juustot">
+    <label for="L5"> Juustot</label>
+    <input type="checkbox" id="L6" name="L6" value="muut">
+    <label for="L6"> Muut tuoteet</label>
+    </form>
+
+
 </body>
 </html>
