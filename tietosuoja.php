@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Tietosuoja</title>
     <link rel="stylesheet" href="mun.css">
+	<title>Tietosuoja</title>
 </head>
 <body class="tietosuoja">
 
