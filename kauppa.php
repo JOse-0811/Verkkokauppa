@@ -8,6 +8,8 @@
 <body>
     <?php
         include_once("yhteys.php");
+        $sql = "SELECT name, category_id, description, prize FROM products";
+        $tulos = $yhteys->query($sql);
     ?>
     <header class="kauppa">
         <img class=logo src="FAVICON.jpg" alt="eLogo">
@@ -22,19 +24,30 @@
     <input type="checkbox" id="kaikki" name="kaikki" value="kaikki">
     <label for="kaikki"> Kaikki</label><br>
     <input type="checkbox" id="L1" name="L1" value="liha">
-    <label for="L1"> Liha</label>
+    <label for="L1"> 1 Liha</label>
     <input type="checkbox" id="L2" name="L2" value="kala">
-    <label for="L2"> Kala</label>
+    <label for="L2"> 2 Kala</label>
     <input type="checkbox" id="L3" name="L3" value="viljatuotteet">
-    <label for="L3"> Viljatuotteet</label>
+    <label for="L3"> 3 Viljatuotteet</label>
     <input type="checkbox" id="L4" name="L4" value="marjat">
-    <label for="L4"> Marjat</label>
+    <label for="L4"> 4 Marjat</label>
     <input type="checkbox" id="L5" name="L5" value="juustot">
-    <label for="L5"> Juustot</label>
+    <label for="L5"> 5 Juustot</label>
     <input type="checkbox" id="L6" name="L6" value="muut">
-    <label for="L6"> Muut tuoteet</label>
+    <label for="L6"> 6 Muut tuoteet</label>
     </form>
-
-
+    <table>
+        <?php
+            while ($rivi= $tulos->fetch_assoc()):
+        ?>
+        <tr>
+            <td><?php echo htmlspecialchars($rivi["name"]) ?></td>
+            <td><?php echo htmlspecialchars($rivi["category_id"]) ?></td>
+            <td><?php echo htmlspecialchars($rivi["description"]) ?></td>
+            <td><?php echo htmlspecialchars($rivi["prize"]) ?></td>
+        </tr>
+        <?php endwhile; ?>
+    </table>
+    <?php $yhteys->close();?>
 </body>
 </html>
