@@ -12,8 +12,8 @@
     ?>
     <header class="eks">
         <img class=logo src="FAVICON.jpg" alt="eLogo">
-        <button class="kirjaudu"><a href="kirjaudu.php">Kirjaudu</a></button>
-        <button class="esk"><a href="etusivu.php">Etusivu</a></button>
+        <a class="esk"href="kirjaudu.php">Kirjaudu</a>
+        <a class="esk" href="etusivu.php">Etusivu</a>
     </header>
     
     	<h2>Rekistöröidy jotta voit tilata!</h2>
@@ -52,10 +52,10 @@
                 $tulos= $yhteys -> query($lisays);
 
                 if($tulos == TRUE){
-                    echo "<p class= 'onnistu'>Rekisteröinti onnistui</p>";
+                    echo "<p class='onnistu'>Rekisteröinti onnistui</p>";
                 }
                 else{
-                    echo "<p class='virhe'>Rekistöröinti epä onnistyi</p>";
+                    echo "<p class='virhe'>Rekistöröinti epä onnistui</p>";
                 }
             }
         }
