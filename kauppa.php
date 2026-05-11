@@ -42,9 +42,14 @@
     <input type="checkbox" id="L6" name="L6" value="muut">
     <label for="L6"> 6 Muut tuoteet</label>
     <br>
-    <input type="submit" value="Valitse">
+    <input type="submit" name="nappi">
     </form>
     <table>
+        <?php
+            if(isset($_GET ['nappi'])){
+                
+            }
+        ?>
         <?php
             while ($rivi= $tulos->fetch_assoc()):
         ?>
