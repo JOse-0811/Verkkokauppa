@@ -46,8 +46,10 @@
     </form>
     <table>
         <?php
-            if(isset($_GET ['nappi'])){
-                
+        
+
+            if(!empty($_GET ['nappi'])){
+
             }
         ?>
         <?php
