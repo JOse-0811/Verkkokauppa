@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="mun.css">
     <title>Kirjaudu</title>
 </head>
-<body class= "kirjaudu">
     <?php
         include_once("yhteys.php");
     ?>
