@@ -19,9 +19,9 @@
 
     echo "<p class= 'teksti'>Espoon seudun koulutuskuntayhtymä Omnia <br> Upseerinkatu 11, 02600 Espoo</p>";
 
-    echo "<h4>Yhteyshenkilö</h4>";
+    echo "<h4>Yhteyshenkilöt</h4>";
 
-    echo "<p class= 'teksti'>Josette Collin <br>000000000 <br>josette.collin@omnia.fi</p>";
+    echo "<p class= 'teksti'>Josette Collin & Jheel Kumari <br>000000000 <br>josette.collin@omnia.fi</p>";
 
     echo "<h4>Henkilötietojen käsittelyn tarkoitus</h4>";
 

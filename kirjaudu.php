@@ -12,8 +12,8 @@
     ?>
     <header class="eks">
         <img class=logo src="FAVICON.jpg" alt="eLogo">
-        <button class="rekisteri"><a href="rekisteri.php">Rekisteri</a></button>
-        <button class="esk"><a href="etusivu.php">Etusivu</a></button>
+        <a class="esk" href="rekisteri.php">Rekisteri</a>
+        <a class="esk" href="etusivu.php">Etusivu</a>
     </header>
         <h2>Kirjaudu sisään</h2>
 <!--kentät-->

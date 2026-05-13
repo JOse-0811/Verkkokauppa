@@ -10,16 +10,16 @@
 <body>
 
 <!--Logo ja nappi kaupaan-->
-    <header class="eks">
-            <img class=logo src="FAVICON.jpg" alt="eLogo">
-            <button class="esr"><a href="rekisteri.php">Rekisteröinti</a></button>
-            <button class="esk"><a href="siiry_kaupaan.php">Kauppaan</a></button>
-    </header>
+<header class="eks">
+    <img class="logo" src="FAVICON.jpg" alt="logo">
+    <a class="esr" href="rekisteri.php">Rekisteröinti</a>
+    <a class="esk" href="siiry_kaupaan.php">Kauppaan</a>
+</header>
 <!--Tervetuloviesti ja nappi-->
     <ul class="ept">
         <h1 class="eo">Tuoretta lähiruokaa suoraan kotiovellesi!</h1>
         <p class="es">Tuottajamarket - Kaupunkilaisille vaivatonta lähiruoan hankintaa.</p>
-        <button class="etsk"><a href="siiry_kaupaan.php">Selaa tuotteitta</a></button>
+        <a class="etsk" href="siiry_kaupaan.php">Selaa tuotteita</a>
 <!--Kuinka se toimii teksti-->
         <div class="toiminta">
             <h2 class="tteksti">Kuinka se toimii</h2>
@@ -105,7 +105,7 @@
     <footer class="tiedot">
         <br>
         <p>&copy; verkkokauppa 2026</p>
-        <p>Josette Collin</p>
+        <p>Josette Collin & Jheel Kumari</p>
         <p>Omnia</p>
         <br>
     </footer>
