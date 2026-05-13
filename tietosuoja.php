@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="mun.css">
 	<title>Tietosuoja</title>
 </head>
-<body class="tietosuoja">
 
     <h3>Tietosuojaseloste - Tuottajamarket-verkkopalvelun käytäjälle</h3>
     <?php
