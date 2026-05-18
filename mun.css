@@ -1,5 +1,5 @@
 /* BODY */
-body{
+body {
 
     /* Taustakuva */
     background-image: url("r.jpg");
@@ -12,6 +12,9 @@ body{
 
     /* Ei toista kuvaa */
     background-repeat: no-repeat;
+
+    /* Koko sivun korkeus */
+    min-height: 100vh;
 
     /* Fontti */
     font-family: Arial, sans-serif;
@@ -27,8 +30,8 @@ body{
 }
 
 
-/* Header */
-.eks{
+/* HEADER */
+.eks {
 
     /* Elementit vierekkäin */
     display: flex;
@@ -41,32 +44,30 @@ body{
 
     /* Sisätila */
     padding: 15px;
+
+    /* Sallii rivittymisen */
+    flex-wrap: wrap;
 }
 
 
-.logo{
-
-    /* Flex käyttöön */
-    display: flex;
+/* Logo */
+.logo {
 
     /* Logon leveys */
     width: 70px;
-
-    /* Elementit riviksi */
-    flex-direction: row;
 
     /* Työntää muut oikealle */
     margin-right: auto;
 }
 
 
-.esk{
+/* YHTEISET NAPPIASETUKSET */
+.esk,
+.esr,
+.etsk {
 
-    /* Taustaväri */
-    background-color: rgba(255, 192, 222, 0.7);
-
-    /* Tekstin koko */
-    font-size: 18px;
+    /* Tekstin väri */
+    color: black;
 
     /* Poistaa reunuksen */
     border: none;
@@ -77,42 +78,46 @@ body{
     /* Sisätila */
     padding: 10px 20px;
 
-    /* Tekstin väri */
-    color: black;
-
     /* Käsi hover */
     cursor: pointer;
+
+    /* Pehmeä animaatio */
+    transition: 0.3s;
 }
 
 
-.esr{
+/* Etusivu-nappi */
+.esk {
 
-    /* Taustaväri */
+    background-color: rgba(255, 192, 222, 0.7);
+
+    font-size: 18px;
+}
+
+
+/* Muut napit */
+.esr,
+.etsk {
+
     background-color: rgba(214, 185, 255, 0.7);
 
-    /* Tekstin koko */
     font-size: 16px;
-
-    /* Poistaa reunuksen */
-    border: none;
-
-    /* Pyöristetyt reunat */
-    border-radius: 20px;
-
-    /* Sisätila */
-    padding: 8px 16px;
-
-    /* Tekstin väri */
-    color: black;
-
-    /* Käsi hover */
-    cursor: pointer;
 }
 
 
+/* Hover-efekti */
+.esk:hover,
+.esr:hover,
+.etsk:hover {
 
-/* Hero-banner */
-.ept{
+    transform: scale(1.05);
+
+    box-shadow: 0 0 15px rgba(255,255,255,0.7);
+}
+
+
+/* HERO-BANNER */
+.ept {
 
     /* Keskittää tekstin */
     text-align: center;
@@ -122,13 +127,11 @@ body{
 }
 
 
-.eo{
+/* Iso otsikko */
+.eo {
 
     /* Tekstin koko */
     font-size: 55px;
-
-    /* Tekstin väri */
-    color: black;
 
     /* Tekstin varjo */
     text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
@@ -138,141 +141,123 @@ body{
 }
 
 
-.es{
+/* Pieni teksti */
+.es {
 
-    /* Tekstin koko */
     font-size: 14px;
 }
 
 
-.etsk{
+/* Väliotsikko */
+.tteksti {
 
-       /* Taustaväri */
-    background-color: rgba(214, 185, 255, 0.7);
-
-    /* Tekstin koko */
-    font-size: 16px;
-
-    /* Poistaa reunuksen */
-    border: none;
-
-    /* Pyöristetyt reunat */
-    border-radius: 20px;
-
-    /* Sisätila */
-    padding: 8px 16px;
-
-    /* Tekstin väri */
-    color: black;
-
-    /* Käsi hover */
-    cursor: pointer;
-
-}
-
-.tteksti{
-
-    /* Tekstin koko */
     font-size: 35px;
 
-    /* Keskittää tekstin */
-    text-align: center;
-}
-
-
-.ekarivi{
-
-    /* Elementit vierekkäin */
-    display: flex;
-
-    /* Keskittää elementit */
-    justify-content: center;
-
-    /* Väli elementtien väliin */
-    gap: 20px;
-}
-
-
-.tokarivi{
-
-    /* Elementit vierekkäin */
-    display: flex;
-
-    /* Keskittää elementit */
-    justify-content: center;
-
-    /* Väli elementtien väliin */
-    gap: 20px;
-}
-
-
-
-/* Footer */
-.tiedot{
-
-    /* Keskittää tekstin */
     text-align: center;
 
-    /* Footerin korkeus */
-    height: 130px;
+    margin-top: 40px;
+}
 
-    /* Tilaa ylös */
+
+/* Korttirivit */
+.ekarivi,
+.tokarivi {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    padding: 10px;
+}
+
+
+/* FOOTER */
+.tiedot {
+
+    text-align: center;
+
+    min-height: 130px;
+
     padding-top: 30px;
 }
 
 
+/* INPUT JA SELECT */
+input,
+select {
 
-/* MOBIILI */
-@media (max-width: 600px){
+    width: 300px;
 
-    /* ETUSIVU */
+    padding: 10px;
 
-    .ekarivi{
+    margin: 8px 0;
 
-        /* Rivistä sarake */
+    border-radius: 10px;
+
+    border: none;
+
+    outline: none;
+
+    box-sizing: border-box;
+
+    transition: 0.3s;
+}
+
+
+/* Focus-efekti */
+input:focus,
+select:focus {
+
+    box-shadow: 0 0 20px #ffffff;
+
+    transform: scale(1.02);
+}
+
+
+/* responsiivisuus */
+@media (max-width: 600px) {
+
+    .eks {
+
+        justify-content: center;
+    }
+
+    .ekarivi,
+    .tokarivi {
+
         flex-direction: column;
 
-        /* Keskittää */
         align-items: center;
     }
 
+    .esk {
 
-    .tokarivi{
-
-        /* Rivistä sarake */
-        flex-direction: column;
-
-        /* Keskittää */
-        align-items: center;
+        font-size: 14px;
     }
 
+    .esr,
+    .etsk {
 
-    /* NAPPULAT */
-
-    .esk{
-
-        /* Pienempi teksti */
-        font-size: 13px;
+        font-size: 12px;
     }
 
+    .eo {
 
-    .esr{
-
-        /* Pienempi teksti */
-        font-size: 10px;
-    }
-
-
-    .eo{
-
-        /* Pienempi otsikko */
         font-size: 38px;
     }
 
+    .tteksti {
 
-    .tteksti{
-
-        /* Pienempi teksti */
         font-size: 25px;
+    }
+
+    input,
+    select {
+
+        font-size: 16px;
     }
 }
