@@ -1,17 +1,17 @@
 <?php
-    session_start();
+session_start();
 
-    if($_SERVER["REQUEST_METHOD"] == "POST"){
-        $nimi= $_POST["name"];
-        $hinta= $_POST["prize"];
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $nimi  = $_POST["nimi"];
+    $hinta = $_POST["hinta"];
 
-        //Lisää tuotte session
-        $_SESSION["kori"][]=[
-            "name"=> $nimi,
-            "prize"=> $hinta
-        ];
+    $_SESSION["kori"][] = [
+        "nimi"  => $nimi,
+        "hinta" => $hinta
+    ];
 
-        //Palauta korissa olleiden tuotteiden määrä
-        echo json_decode(["maara" => count($_SESSION["kori"])]);
-    }
+    header("Content-Type: application/json");
+    echo json_encode(["maara" => count($_SESSION["kori"])]);
+    exit();
+}
 ?>
