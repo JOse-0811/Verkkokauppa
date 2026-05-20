@@ -74,10 +74,10 @@
             while ($rivi= $tulos->fetch_assoc()):
         ?>
         <tr>
-            <td><?php echo htmlspecialchars($rivi["name"]) ?></td>
-            <td><?php echo htmlspecialchars($rivi["category_id"]) ?></td>
-            <td><?php echo htmlspecialchars($rivi["description"]) ?></td>
-            <td><?php echo htmlspecialchars($rivi["prize"]) ?>€</td>
+            <td><div class="nimi"><?php echo htmlspecialchars($rivi["name"]) ?></div></td>
+            <td><div class="id"><?php echo htmlspecialchars($rivi["category_id"]) ?></div></td>
+            <td><div class="tuote"><?php echo htmlspecialchars($rivi["description"]) ?></div></td>
+            <td><div class="hinta"><?php echo htmlspecialchars($rivi["prize"]) ?>€</div></td>
         </tr>
         <td>
         <button class="lisaa-koriin" 
