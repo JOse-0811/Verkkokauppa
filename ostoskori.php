@@ -1,11 +1,4 @@
-<?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-// Tarkistetaan onko kaverin luomassa "kori"-istunnossa tuotteita.
-$ostoskori_on_tyhja = (!isset($_SESSION["kori"]) || count($_SESSION["kori"]) == 0);
-?>
+<?php include_once("yhteys.php") ?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
