@@ -1,3 +1,4 @@
+<?php include_once("yhteys.php") ?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
