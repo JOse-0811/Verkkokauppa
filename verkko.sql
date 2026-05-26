@@ -260,5 +260,6 @@ kaytaja_id INT AUTO_INCREMENT,
 käyttäjätunnus VARCHAR(20) NOT NULL,
 salasana VARCHAR(220) NOT NULL,
 rooli VARCHAR(10),
+email VARCHAR(100),
 PRIMARY KEY(kaytaja_id)
 );

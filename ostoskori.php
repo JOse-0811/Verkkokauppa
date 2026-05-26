@@ -1,4 +1,8 @@
-<?php include_once("yhteys.php") ?>
+<?php include_once("yhteys.php");
+if(!isset($_SESSION["kayttaja_id"]) || ($_SESSION["rooli"] != "0" && $_SESSION["rooli"] != "1")){
+    header("Location: etusivu.php");
+    exit();
+}?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -9,5 +13,6 @@
 </head>
 <body>
     <h2>Ostoskori</h2>
+     <a class="kurjaudu_ulos" href="kirjaudu_ulos.php">Kirjaudu ulos</a>
 </body>
 </html>

@@ -20,6 +20,7 @@
 <!--laatikot -->
     <form method="post">
         <input type="text" id="kaytaja" name="kaytaja" placeholder="Käytäjätunnus"><br><br>
+        <input type="text" id="sahkoposti" name="sahkoposti" placeholder="sähköposti"><br><br>
         <input type="password" id="salasana" name="salasana" placeholder="salasana"><br><br>
         <button type="submit" name="rekisteri">rekistöröidy</button>
     </form>
@@ -31,16 +32,17 @@
     if(isset($_POST["rekisteri"])){
         $kautajanimi= $_POST['kaytaja'];
         $salasana= $_POST['salasana'];
+        $sahkoposti= $_POST['sahkoposti'];
         // Salasana hashataan (Eri hash joka kerta)
         $salattu= password_hash($salasana, PASSWORD_DEFAULT);
 
         // Tarkistaa onko kaikki kentät täytetty
-        if(empty($kautajanimi) || empty($salasana)){
+        if(empty($kautajanimi) || empty($salasana) || empty($sahkoposti)){
             echo "<p class='virhe'>Täyttä kaikki kentät</p>";
         }
         // Tarkistaa onko käytäjä jo olemassa
         else{
-            $haku= "SELECT * FROM kayttaja WHERE käyttäjätunnus = '$kautajanimi'";
+            $haku= "SELECT * FROM kayttaja WHERE email = '$sahkoposti'";
             $tulos= $yhteys -> query($haku);
 
             if($tulos -> num_rows > 0){
@@ -48,7 +50,7 @@
             }
             // Tallentaa käyttäjän
             else{
-                $lisays= "INSERT INTO kayttaja (käyttäjätunnus, salasana, rooli) VALUES ('$kautajanimi', '$salattu', '0')";
+                $lisays= "INSERT INTO kayttaja (käyttäjätunnus, salasana, rooli, email) VALUES ('$kautajanimi', '$salattu', '0', '$sahkoposti')";
                 $tulos= $yhteys -> query($lisays);
 
                 if($tulos == TRUE){
