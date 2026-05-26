@@ -9,12 +9,15 @@
 </head>
 <body>
 
+
+
 <!--Logo ja nappi kaupaan-->
-<header class="eks">
-    <img class="logo" src="FAVICON.jpg" alt="logo">
-    <a class="esr" href="rekisteri.php">Rekisteröinti</a>
-    <a class="esk" href="siiry_kaupaan.php">Kauppaan</a>
-</header>
+    <header class="eks">
+        <img class="logo" src="FAVICON.jpg" alt="logo">
+        <a class="esr" href="rekisteri.php">Rekisteröinti</a>
+        <a class="esk" href="siiry_kaupaan.php">Kauppaan</a>
+         <a class="kurjaudu_ulos" href="kirjaudu_ulos.php">Kirjaudu ulos</a>
+    </header>
 <!--Tervetuloviesti ja nappi-->
     <ul class="ept">
         <h1 class="eo">Tuoretta lähiruokaa suoraan kotiovellesi!</h1>

@@ -43,7 +43,7 @@
                 if(password_verify($salasana, $rivi['salasana'])){
 
                     /*Kirjautuminen onnistuu*/
-                    $_SESSION['kaytajanimi'] = $kaytanimi;
+                    $_SESSION['kayttaja_id'] = $kaytanimi;
                     $_SESSION['rooli'] = $rivi['rooli'];
 
                     header("Location: etusivu.php");

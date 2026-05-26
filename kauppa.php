@@ -1,4 +1,9 @@
-<?php include_once("yhteys.php"); ?>
+<?php include_once("yhteys.php");
+if(!isset($_SESSION["kayttaja_id"]) || ($_SESSION["rooli"] != "0" && $_SESSION["rooli"] != "1")){
+    header("Location: etusivu.php");
+    exit();
+} ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -9,6 +14,7 @@
 </head>
 <body>
     <?php
+
         $nimi = !empty($_GET["nimi"]) ? "%" . $_GET["nimi"] . "%" : "%";
 
         $valitut= [];
@@ -38,6 +44,7 @@
         </a>
 
         <a class="esk" href="etusivu.php">Etusivu</a>
+        <a class="kurjaudu_ulos" href="kirjaudu_ulos.php">Kirjaudu ulos</a>
 
     </header>
     <h2>Verkkokaupa</h2>
@@ -126,5 +133,14 @@
     </script>
 
     <?php $yhteys->close();?>
+
+    <!--nimet jatiedot-->
+    <footer class="tiedot">
+        <br>
+        <p>&copy; verkkokauppa 2026</p>
+        <p>Josette Collin & Jheel Kumari</p>
+        <p>Omnia</p>
+        <br>
+    </footer>
 </body>
 </html>
