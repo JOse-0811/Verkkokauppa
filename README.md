@@ -1,4 +1,3 @@
-# KESKEN
   # VERKKOKAUPPA
 Verkkokauppa projekti on tehty PHP:lla ja MYSQL:llä.
 ## TEKIJÄT
@@ -22,5 +21,11 @@ Verkkokauppa projekti on tehty PHP:lla ja MYSQL:llä.
 3. Tarkista että yhteys.php tietokantatiedot vastaa omasi tiedostoon
 4. Avaa selaimessa http://localhost/projekti/etusivu.php
 ## TYÖNJAOT
-- Josette:
-- Jheel:
+### Josette:
+  - Kaikkien sivujen toteutus (etusivu.php, kauppa.php, kirjaudu.php, rekisteri.php, lisaa_koriin.php, kirjaudu_ulos.php, tietosuoja.php, yhteys.php, README)
+  - Navigointi
+  - Roolipohjainen käyttöoikeuksien hallinta (kuka pääsee millekin sivulle)
+  - Tietokantakyselyt ja haku
+### Jheel: 
+  - Koko sivuston CSS-tyylittely
+  - Ostoskori-toiminnallisuus (ostoskori.php, poista_korista.php)
