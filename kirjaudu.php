@@ -61,5 +61,13 @@
     $yhteys-> close();
 
     ?>
+    <!--nimet jatiedot-->
+    <footer class="tiedot">
+        <br>
+        <p>&copy; verkkokauppa 2026</p>
+        <p>Josette Collin & Jheel Kumari</p>
+        <p>Omnia</p>
+        <br>
+    </footer>
 </body>
 </html>
