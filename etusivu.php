@@ -9,17 +9,14 @@
 </head>
 <body>
 
-<!--Logo ja nappi kaupaan-->
-<header class="eks">
-    <img class="logo" src="FAVICON.jpg" alt="logo">
-    <a class="esr" href="rekisteri.php">Rekisteröinti</a>
-    <a class="esk" href="siiry_kaupaan.php">Kauppaan</a>
-</header>
+     <?php include 'nav.php';?>
+ 
+
 <!--Tervetuloviesti ja nappi-->
     <ul class="ept">
         <h1 class="eo">Tuoretta lähiruokaa suoraan kotiovellesi!</h1>
         <p class="es">Tuottajamarket - Kaupunkilaisille vaivatonta lähiruoan hankintaa.</p>
-        <a class="etsk" href="siiry_kaupaan.php">Selaa tuotteita</a>
+        <a class="etsk" href="kauppa.php">Selaa tuotteita</a>
 <!--Kuinka se toimii teksti-->
         <div class="toiminta">
             <h2 class="tteksti">Kuinka se toimii</h2>

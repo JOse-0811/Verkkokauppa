@@ -1,3 +1,10 @@
+<?php
+require_once 'yhteys.php';
+session_start();
+ 
+// Pakotetaan käyttäjä kirjautumaan, jos istuntoa ei löydy
+
+?>
 <?php 
 
 // 2. OTETAAN TIETOKANTAYHTEYS KÄYTTÖÖN

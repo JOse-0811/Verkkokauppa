@@ -6,14 +6,13 @@
     <link rel="stylesheet" href="mun.css">
     <title>Kirjaudu</title>
 </head>
+<body> 
+     <?php include 'nav.php';?>
+    
     <?php
         include_once("yhteys.php");
     ?>
-    <header class="eks">
-        <img class=logo src="FAVICON.jpg" alt="eLogo">
-        <a class="esk" href="rekisteri.php">Rekisteri</a>
-        <a class="esk" href="etusivu.php">Etusivu</a>
-    </header>
+    
         <h2>Kirjaudu sisään</h2>
 <!--kentät-->
     <div class="lomake-boxi">
@@ -45,7 +44,7 @@
                 if(password_verify($salasana, $rivi['salasana'])){
 
                     /*Kirjautuminen onnistuu*/
-                    $_SESSION['kaytajanimi'] = $kaytanimi;
+                    $_SESSION['kayttaja_id'] = $kaytanimi;
                     $_SESSION['rooli'] = $rivi['rooli'];
 
                     header("Location: etusivu.php");

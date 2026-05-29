@@ -1,6 +1,12 @@
 <?php
-include_once("yhteys.php");
+require_once 'yhteys.php';
+session_start();
+
+
+
+
 ?>
+
 <!DOCTYPE html>
 <html lang="fi">
 <head>
@@ -12,8 +18,11 @@ include_once("yhteys.php");
 
 <body>
 
-<?php
-$nimi = !empty($_GET["nimi"]) ? "%" . $_GET["nimi"] . "%" : "%";
+    <?php include 'nav.php';?>
+ 
+    <?php
+
+        $nimi = !empty($_GET["nimi"]) ? "%" . $_GET["nimi"] . "%" : "%";
 
 $valitut = [];
 if (!empty($_GET["L1"])) $valitut[] = 1;
@@ -27,22 +36,16 @@ $kategoria = (!empty($_GET["kaikki"]) || empty($valitut))
     ? "1,2,3,4,5,6"
     : implode(",", $valitut);
 
-$sql = "SELECT name, category_id, description, prize 
-        FROM products 
-        WHERE name LIKE ? AND category_id IN ($kategoria)";
+        $sql = "SELECT name, category_id, description, prize FROM products WHERE name LIKE ? AND category_id IN ($kategoria)";
+        $stmt = $yhteys->prepare($sql);
+        $stmt -> bind_param("s", $nimi);
+        $stmt -> execute();
+        $tulos= $stmt->get_result();
+    ?>
+    <!--HEAD-->
+    <header class="kauppa">
+    
 
-$stmt = $yhteys->prepare($sql);
-$stmt->bind_param("s", $nimi);
-$stmt->execute();
-$tulos = $stmt->get_result();
-?>
-
-<!-- HEADER -->
-<header class="kauppa">
-
-    <img class="logo" src="FAVICON.jpg" alt="logo">
-
-    <a class="esk" href="etusivu.php">Etusivu</a>
 
     <a class="siiryost" href="ostoskori.php">
         

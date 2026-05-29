@@ -1,5 +1,7 @@
 <?php
 include_once("yhteys.php");
+session_start();
+
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     $nimi  = $_POST["nimi"];
@@ -59,3 +61,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     exit();
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mun.css">
+</head>
+<body>
+     <?php include 'nav.php';?>
+ 
+    
+</body>
+</html>
