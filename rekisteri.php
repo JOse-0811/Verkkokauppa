@@ -18,11 +18,13 @@
     
     	<h2>Rekistöröidy jotta voit tilata!</h2>
 <!--laatikot -->
+    <div class="lomake-boxi">
     <form method="post">
         <input type="text" id="kaytaja" name="kaytaja" placeholder="Käytäjätunnus"><br><br>
         <input type="password" id="salasana" name="salasana" placeholder="salasana"><br><br>
         <button type="submit" name="rekisteri">rekistöröidy</button>
     </form>
+    </div>
     <br>
     <p>Rekisteröityessäsi verkkokaupaan käyttäjäksi hyväksyt henkilötietojesi käsitelyehdot.</p>
     <p>Lue täältä <a href="tietosuoja.php">Tuottajamarket tietosuojaseloste</a>.</p>
@@ -63,5 +65,12 @@
     }
         $yhteys-> close();
     ?>
+     <footer class="tiedot">
+        <br>
+        <p>&copy; Verkkokauppa 2026</p>
+        <p>Josette Collin & Jheel Kumari</p>
+        <p>Omnia</p>
+        <br>
+    </footer>
 </body>
 </html>

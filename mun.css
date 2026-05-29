@@ -1,263 +1,341 @@
-/* BODY */
-body {
+/* 1. YLEISET ASETUKSET */
 
-    /* Taustakuva */
-    background-image: url("r.jpg");
-
-    /* Kuva täyttää koko sivun */
-    background-size: cover;
-
-    /* Kuva keskelle */
-    background-position: center;
-
-    /* Ei toista kuvaa */
-    background-repeat: no-repeat;
-
-    /* Koko sivun korkeus */
-    min-height: 100vh;
-
-    /* Fontti */
-    font-family: Arial, sans-serif;
-
-    /* Tekstin väri */
-    color: black;
-
-    /* Poistaa reunat */
-    margin: 0;
-
-    /* Poistaa sisätilat */
-    padding: 0;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #222;
 
-/* HEADER */
-.eks {
-
-    /* Elementit vierekkäin */
     display: flex;
-
-    /* Keskittää pystysuunnassa */
+    flex-direction: column;
     align-items: center;
 
-    /* Väli elementtien väliin */
-    gap: 10px;
+    background: linear-gradient(135deg, #ffd6e7, #4e82b3, #013e5d);
+    background-attachment: fixed;
+}
 
-    /* Sisätila */
-    padding: 15px;
+/* 2. HEADER / LOGO / NAVIGAATIO */
 
-    /* Sallii rivittymisen */
+.eks,
+.kauppa {
+    width: 100%;
+    padding: 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
     flex-wrap: wrap;
 }
 
-
-/* Logo */
 .logo {
-
-    /* Logon leveys */
-    width: 70px;
-
-    /* Työntää muut oikealle */
-    margin-right: auto;
+    width: 80px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* 3. NAPIT */
 
-/* YHTEISET NAPPIASETUKSET */
 .esk,
 .esr,
-.etsk {
-
-    /* Tekstin väri */
-    color: black;
-
-    /* Poistaa reunuksen */
+.etsk,
+.siiryost {
+    padding: 12px 22px;
     border: none;
+    border-radius: 30px;
+    text-decoration: none;
 
-    /* Pyöristetyt reunat */
-    border-radius: 20px;
+    background: rgba(255,255,255,0.7);
+    color: #222;
+    font-weight: bold;
 
-    /* Sisätila */
-    padding: 10px 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
-    /* Käsi hover */
-    cursor: pointer;
+.esk:hover,
+.esr:hover,
+.etsk:hover,
+.siiryost:hover {
+    transform: scale(1.05);
+    background: white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
 
-    /* Pehmeä animaatio */
+/* OSTOSKORI NUMERO */
+#kori-maara {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 4. ETUSIVUN TEKSTIT */
+
+.ept {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.eo {
+    font-size: 55px;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+.es {
+    font-size: 18px;
+    color: white;
+}
+
+.tteksti {
+    margin-top: 50px;
+    font-size: 35px;
+    color: white;
+}
+
+/* 5. ETUSIVUN INFO-LAATIKOT */
+
+.ekarivi,
+.tokarivi {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* LAATIKOT */
+.o1,
+.o2,
+.o3,
+.o4,
+.o5,
+.o6,
+.o7 {
+    width: 300px;
+    list-style: none;
+    padding: 25px;
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+    color: #222;
+}
+
+.o1:hover,
+.o2:hover,
+.o3:hover,
+.o4:hover,
+.o5:hover,
+.o6:hover,
+.o7:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔥 TÄRKEÄ FIX: 7. KORTTI EI HÄVIÄ */
+.o7 {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* 6. REKISTERI */
+
+.lomake-boxi {
+    width: 350px;
+    padding: 35px;
+    margin-top: 40px;
+
+    border-radius: 25px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.lomake-boxi input {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+
+    border: none;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.85);
+
+    font-size: 15px;
+}
+
+.lomake-boxi button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 10px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: linear-gradient(#ffb6d9, #cba6ff);
+    color: white;
+
+    font-weight: bold;
+}
+
+/* 7. KAUPPA KORTIT (TÄRKEIN FIX SULLE) */
+
+.tuotteet-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 30px;
+}
+
+.tuote-kortti {
+    width: 300px;
+    padding: 25px;
+
+    border-radius: 25px;
+    background: rgba(255,255,255,0.9);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     transition: 0.3s;
 }
 
-
-/* Etusivu-nappi */
-.esk {
-
-    background-color: rgba(255, 192, 222, 0.7);
-
-    font-size: 18px;
+.tuote-kortti:hover {
+    transform: translateY(-5px);
 }
 
-
-/* Muut napit */
-.esr,
-.etsk {
-
-    background-color: rgba(214, 185, 255, 0.7);
-
-    font-size: 16px;
-}
-
-
-/* Hover-efekti */
-.esk:hover,
-.esr:hover,
-.etsk:hover {
-
-    transform: scale(1.05);
-
-    box-shadow: 0 0 15px rgba(255,255,255,0.7);
-}
-
-
-/* HERO-BANNER */
-.ept {
-
-    /* Keskittää tekstin */
-    text-align: center;
-
-    /* Sisätila */
-    padding: 50px 20px;
-}
-
-
-/* Iso otsikko */
-.eo {
-
-    /* Tekstin koko */
-    font-size: 55px;
-
-    /* Tekstin varjo */
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
-
-    /* Väli alas */
+.nimi {
+    font-size: 24px;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
-
-/* Pieni teksti */
-.es {
-
-    font-size: 14px;
+.tuote {
+    margin-bottom: 15px;
+    line-height: 1.5;
 }
 
-
-/* Väliotsikko */
-.tteksti {
-
-    font-size: 35px;
-
-    text-align: center;
-
-    margin-top: 40px;
+.hinta {
+    font-size: 22px;
+    font-weight: bold;
+    color: #8a3ffc;
+    margin-bottom: 15px;
 }
 
-
-/* Korttirivit */
-.ekarivi,
-.tokarivi {
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-
-    padding: 10px;
-}
-
-
-/* FOOTER */
-.tiedot {
-
-    text-align: center;
-
-    min-height: 130px;
-
-    padding-top: 30px;
-}
-
-
-/* INPUT JA SELECT */
-input,
-select {
-
-    width: 300px;
-
-    padding: 10px;
-
-    margin: 8px 0;
-
-    border-radius: 10px;
+.lisaa-koriin {
+    width: 100%;
+    padding: 12px;
 
     border: none;
+    border-radius: 20px;
 
-    outline: none;
-
-    box-sizing: border-box;
-
-    transition: 0.3s;
+    background: linear-gradient(#ffb6d9, #cba6ff);
 }
 
+/* 8. OSTOSKORI*/
 
-/* Focus-efekti */
-input:focus,
-select:focus {
+.kori-tuotteet,
+.kori-lomake,
+.tyhja-keskitys {
+    background: rgba(255,255,255,0.9);
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 
-    box-shadow: 0 0 20px #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    margin-bottom: 20px;
 
-    transform: scale(1.02);
+    text-align: center;
 }
 
+/* tuotteiden lista */
+.kori-tuotteet {
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+}
 
-/* responsiivisuus */
-@media (max-width: 600px) {
+/* tuotteen nimi */
+.kori-tuotteet h3,
+.kori-tuotteet strong {
+    font-size: 20px;
+    margin-bottom: 8px;
+    display: block;
+}
 
-    .eks {
+/* inputit */
+.kori-tuotteet input,
+.kori-lomake input {
+    width: 100%;
+    padding: 12px 18px;
+    margin: 10px 0;
 
-        justify-content: center;
-    }
+    border-radius: 30px;
+    border: 1px solid #ccc;
+}
 
-    .ekarivi,
-    .tokarivi {
+/* linkit */
+.kori-tuotteet a {
+    color: #8a3ffc;
+    font-weight: bold;
+    text-decoration: none;
+}
 
-        flex-direction: column;
+.kori-tuotteet a:hover {
+    text-decoration: underline;
+}
 
-        align-items: center;
-    }
+/* napit */
+.kori-lomake button,
+.kori-lomake input[type="submit"] {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
 
-    .esk {
+    border: none;
+    border-radius: 30px;
 
-        font-size: 14px;
-    }
+    background: linear-gradient(#ffb6d9, #cba6ff);
+    color: white;
 
-    .esr,
-    .etsk {
+    font-weight: bold;
+    cursor: pointer;
+}
 
-        font-size: 12px;
-    }
+/* 9. FOOTER */
+
+.tiedot {
+    width: 100%;
+    margin-top: auto;
+    padding: 20px;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+}
+
+/* 10. MOBILE */
+
+@media (max-width: 768px) {
 
     .eo {
-
         font-size: 38px;
     }
 
     .tteksti {
-
-        font-size: 25px;
+        font-size: 28px;
     }
 
-    input,
-    select {
-
-        font-size: 16px;
+    .tuote-kortti,
+    .o1, .o2, .o3, .o4, .o5, .o6, .o7 {
+        width: 90%;
     }
 }

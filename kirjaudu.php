@@ -16,11 +16,13 @@
     </header>
         <h2>Kirjaudu sisään</h2>
 <!--kentät-->
-    <form  method="post">
+    <div class="lomake-boxi">
+    <form method="post">
     <input type="text" id="kaytaja" name="kaytaja" placeholder="Käytäjätunnus" required><br><br>
     <input type="password" id="salasana" name="salasana" placeholder="salasana" required><br><br>
     <button type="submit" name="kirjaudu">Kirjaudu</button>
     </form>
+    </div>
     <?php
 
     if(isset($_POST['kirjaudu'])){
@@ -61,5 +63,12 @@
     $yhteys-> close();
 
     ?>
+    <footer class="tiedot">
+        <br>
+        <p>&copy; Verkkokauppa 2026</p>
+        <p>Josette Collin & Jheel Kumari</p>
+        <p>Omnia</p>
+        <br>
+    </footer>
 </body>
 </html>

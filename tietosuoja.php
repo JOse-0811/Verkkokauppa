@@ -39,5 +39,12 @@
     echo "<p class= 'teksti'>Käyttäjällä on oikeus tarkistaa, korjata ja poistaa omat tietonsa ottamalla yhteyttä rekisterinpitäjään.</p>";
 
     ?>
+    <footer class="tiedot">
+        <br>
+        <p>&copy; Verkkokauppa 2026</p>
+        <p>Josette Collin & Jheel Kumari</p>
+        <p>Omnia</p>
+        <br>
+    </footer>
 </body>
 </html>
