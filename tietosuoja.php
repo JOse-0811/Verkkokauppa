@@ -48,4 +48,9 @@
         <br>
     </footer>
 </body>
+     <?php
+// Lisätään navigaatiopalkki
+include 'nav.php';
+?>
+ 
 </html>

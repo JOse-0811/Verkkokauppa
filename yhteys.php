@@ -10,6 +10,4 @@
         die('Yhteyden mudostaminen epäonnistui; ');
     };
     $yhteys -> set_charset('utf8');
-    $_SESSION = array();
-    session_start();
-?>
+    ?>

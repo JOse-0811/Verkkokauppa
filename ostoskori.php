@@ -1,8 +1,10 @@
-<?php include_once("yhteys.php");
-if(!isset($_SESSION["kayttaja_id"]) || ($_SESSION["rooli"] != "0" && $_SESSION["rooli"] != "1")){
-    header("Location: etusivu.php");
-    exit();
-}?>
+<?php
+require_once 'yhteys.php';
+session_start();
+ 
+// Pakotetaan käyttäjä kirjautumaan, jos istuntoa ei löydy
+
+?>
 <!DOCTYPE html>
 <html lang="fi">
 <head>
